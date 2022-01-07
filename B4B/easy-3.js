@@ -20,7 +20,7 @@ function main(input) {
                 results.push('No');
             }
         } else if (p == 'b') {
-            if (bCount < B) {
+            if (totalCount < A + B && bCount < B) {
                 results.push('Yes');
                 totalCount++
                 bCount++
@@ -33,5 +33,5 @@ function main(input) {
 }
 
 // main(require("fs").readFileSync("/dev/stdin", "utf8"));
-main(`12 5 2
-cabbabaacaba`);
+main(`5 2 2
+ccccc`);
