@@ -1,3 +1,5 @@
+// HかWが1の場合（例外/corner case）を考慮する
+// https://atcoder.jp/contests/typical90/tasks/typical90_ag
 'use strict'
 
 function main(input) {
