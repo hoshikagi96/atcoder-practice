@@ -1,0 +1,24 @@
+{
+  "name": "atcoder-practice",
+  "version": "1.0.0",
+  "description": "AtCoderに提出したコード置き場です",
+  "main": "template.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hoshikagi96/atcoder-practice.git"
+  },
+  "author": "mihoshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hoshikagi96/atcoder-practice/issues"
+  },
+  "homepage": "https://github.com/hoshikagi96/atcoder-practice#readme",
+  "dependencies": {
+    "typescript": "^4.5.5"
+  }
+}
