@@ -4,32 +4,28 @@ namespace ABC238_C {
     // import * as fs from 'fs';
     // const input = fs.readFileSync("/dev/stdin", "utf8");
 
-    const N = Number(input)
+    const N = BigInt(input)
 
-    function getSum(N: number) {
-        console.log(N)
-        if (N % 2 === 0) {
-            return (1 + N) * (N / 2)
+    function getSum(N: bigint) {
+        if (N % 2n === 0n) {
+            return (1n + N) * (N / 2n)
         } else {
-            return 1 + ((2 + N) * ((N - 1) / 2)) 
+            return 1n + ((2n + N) * ((N - 1n) / 2n)) 
         }
     }
 
-    function main(N: number) {
-        let total = 0;
+    function main(N: bigint) {
+        let total = 0n;
         const strN = N.toString()
         for (let i = 1; i < strN.length; i++) {
-            const count = Number('9' + '0'.repeat(i - 1))
+            const count = BigInt('9' + '0'.repeat(i - 1))
             const sum = getSum(count)
-            console.log(sum)
-            total += sum % 998244353
+            total += sum
         }
-        const tmp = N - Number('9'.repeat(strN.length - 1))
-        const tmpSum = tmp ? getSum(tmp): 0
-        total +=  tmpSum ? tmpSum % 998244353: 0
-        console.log(tmpSum)
- 
-        console.log(total)
+        const tmp = N - BigInt('9'.repeat(strN.length - 1))
+        const tmpSum = tmp ? getSum(tmp): 0n
+        total +=  tmpSum
+        console.log((total % 998244353n).toString())
     }
 
     main(N)

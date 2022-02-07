@@ -7,19 +7,6 @@ function main(input) {
     const cards = [];
     for (let i = 0; i < Q; i++) {
         const [t, x] = tmp[i].split(' ').map(Number);
-        switch (t) {
-            case 1:
-                cards.unshift(x);
-                break;
-            case 2:
-                cards.push(x);
-                break;
-            case 3:
-                console.log(cards[x - 1]);
-                break;
-            default:
-                break;
-        }
         
         if (t === 1) {
             cards.unshift(x);

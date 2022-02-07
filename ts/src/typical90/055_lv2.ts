@@ -1,11 +1,14 @@
-// TODO: jsだとTLE?
-'use strict'
+// TODO: 全探索だとTLE?
 
-function main(input) {
-    const tmp = input.split('\n');
-    const [N, P, Q] = tmp.shift().split(' ').map(BigInt);
-    const nums = tmp.shift().split(' ').map(BigInt);
+namespace Typical55 {
+    const input = `10 1 0
+0 0 0 0 0 0 0 0 0 0`
+    // import * as fs from 'fs';
+    // const input = fs.readFileSync("/dev/stdin", "utf8");
 
+    const tmp: string[] = input.split('\n');
+    const [N, P, Q] = tmp[0].split(' ').map(BigInt);
+    const nums = tmp[1].split(' ').map(BigInt);
     let count = 0;
     for (let i = 0; i < N; i++) {
         for (let j = 0; j < i; j++) {
@@ -20,9 +23,5 @@ function main(input) {
             }
         }
     }
-    console.log(count);
+    console.log(count)
 }
-
-// main(require("fs").readFileSync("/dev/stdin", "utf8"));
-main(`10 1 0
-0 0 0 0 0 0 0 0 0 0`)
