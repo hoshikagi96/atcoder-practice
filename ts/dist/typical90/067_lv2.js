@@ -1,5 +1,5 @@
 "use strict";
-// TODO: WAあり
+// BigIntの場合 parseIntを通すと数値がブレるので、n進数から10進数へ変換する関数を自前で用意
 var typical67;
 (function (typical67) {
     const input = `0 1`;
