@@ -27,6 +27,7 @@ namespace Typical7 {
     // 昇順にソート
     classes.sort((a: number, b: number) => a - b);
 
+    // 二分探索：　target以上になるindexを返す
     function binarySearch(list: number[], target: number): number {
         let index = -1
         let min = 0

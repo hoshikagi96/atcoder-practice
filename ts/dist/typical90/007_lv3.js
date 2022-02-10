@@ -24,6 +24,7 @@ var Typical7;
     const students = tmp.map(Number);
     // 昇順にソート
     classes.sort((a, b) => a - b);
+    // 二分探索：　target以上になるindexを返す
     function binarySearch(list, target) {
         let index = -1;
         let min = 0;
