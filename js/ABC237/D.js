@@ -22,3 +22,4 @@ function main(input) {
 // main(require("fs").readFileSync("/dev/stdin", "utf8"));
 main(`5
 LRRLR`)
+
